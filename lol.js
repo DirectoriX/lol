@@ -59,13 +59,48 @@
 
     avgtime = hours + ":" + addLeadZeroes(minutes) + ":" + addLeadZeroes(seconds);
 
-    function getFull() {
-        return  "<br>Суммарное время игр - " + time + "<br>Среднее время игры - " + avgtime;
+    var allk = 0;
+    var alld = 0;
+    var alla = 0;
+
+    $.each($(".kda-plate-kda"), function (i, elem) {
+        var thiskda = $(this).text();
+        var aa = new String(thiskda);
+        var vals = aa.split("/");
+        allk += vals[0] - 0;
+        alld += vals[1] - 0;
+        alla += vals[2] - 0;
+    });
+
+    var kda = (allk / total).toPrecision(4) + "/";
+    kda += (alld / total).toPrecision(4) + "/";
+    kda += (alla / total).toPrecision(4);
+
+    var allminions = 0;
+
+    $.each($(".income-minions"), function (i, elem) {
+        var thisminions = $(this).text();
+        allminions += thisminions - 0;
+    });
+
+    var minions = (allminions / total).toPrecision(5);
+
+    var allgold = 0;
+
+    $.each($(".income-gold"), function (i, elem) {
+        var thisgold = parseFloat($(this).text());
+        allgold += thisgold;
+    });
+
+    var gold = (allgold / total).toPrecision(4) + 'k';
+
+    function addition() {
+        return  "<br>Суммарное время игр - " + time + "<br>Среднее время игры - " + avgtime + "<br>Средний KDA - " + kda + "<br>Среднее количество миньонов - " + minions + "<br>Среднее количество золота - " + gold;
     }
-    function getShort() {
+    function basic() {
         return "Всего игр - " + total + "<br>Побед - " + win + "<br>Поражений - " + lose + "<br>Винрейт - " + winrate + "%";
     }
 
-    s.innerHTML = "<div class='dixaba'>" + divstrl + divclose + getShort() + divstrr + "</div>" + "<div class='dixaba' style='display: none'>" + divstrl + divclose + getShort()+getFull() + divstrr + "</div>";
+    s.innerHTML = "<div class='dixaba'>" + divstrl + divclose + basic() + divstrr + "</div>" + "<div class='dixaba' style='display: none'>" + divstrl + divclose + basic() + addition() + divstrr + "</div>";
     document.body.insertBefore(s, document.body.firstChild);
 }).call(this);
