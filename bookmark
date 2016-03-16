@@ -1,1 +1,1 @@
-javascript:(function%20()%20{var%20s%20=%20document.createElement('script');s.setAttribute('type',%20'text/javascript');s.setAttribute('src',%20'https://cdn.rawgit.com/DirectoriX/lol/2c6b329d1f64447dc74419f796f31ca009b4db16/lol.js');document.body.appendChild(s);}());
+javascript:(function%20()%20{var%20s%20=%20document.createElement('script');s.setAttribute('type',%20'text/javascript');s.setAttribute('src',%20'https://cdn.rawgit.com/DirectoriX/lol/adcb080a18f366a48ec2ded820f502d0f18b080f/lol.js');document.body.appendChild(s);}());
