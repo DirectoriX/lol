@@ -1,0 +1,26 @@
+.dixaba-strl {
+    z-index: 1000;
+    font-size: 20px;
+    color: #660000;
+    background-color: #ffffff;
+    margin: 35px;
+    padding: 5px;
+    position: fixed;
+    border: #000000;
+    border-radius: 5px;
+    border-style: solid;
+}
+.dixaba-close{
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    position: absolute;
+    border-radius: 3px;
+}
+.dixaba-div{
+    border: #000000;
+    border-width: 1px;
+    border-style: solid;
+}
