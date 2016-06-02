@@ -64,7 +64,8 @@
         });
         var kda = (allk / total).toFixed(1) + "/";
         kda += (alld / total).toFixed(1) + "/";
-        kda += (alla / total).toFixed(1);
+        kda += (alla / total).toFixed(1) + " = ";
+        kda += ((alla + allk) / alld).toFixed(1);
         var allminions = 0;
         $.each($(".income-minions"), function (i, elem) {
             var thisminions = $(this).text();
