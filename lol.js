@@ -9,7 +9,7 @@
         $(".dixaba-statistics").remove();
     }
     else {
-        $("head").append($("<link rel='stylesheet' href='http://dixaba.github.io/lol/dixaba-styles.css' type='text/css' />"));
+        $("head").append($("<link rel='stylesheet' href='https://dixaba.github.io/lol/dixaba-styles.css' type='text/css' />"));
     }
     if ($(".game-summary").length !== 0) { // История игр
         var s = document.createElement('div');
