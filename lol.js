@@ -206,7 +206,7 @@
                       continue;
                     }
                     row = $(tbl).children()[r];
-                    var notkilo = [25, 26, 27, 28, 30, 31, 32, 33, 34, 35];
+                    var notkilo = [25, 26, 27, 28, 32, 33, 34, 35];
                     var res;
                     var summa = 0;
                     for (var i = 1; i < 6; i++) {
