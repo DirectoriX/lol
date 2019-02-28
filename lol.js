@@ -198,15 +198,16 @@
             // Суммарные показатели
             {
                 for (var r = 7; r < 34; r++) {
-                    var skip = [15, 16, 22, 23, 27, 28];
+                for (var r = 7; r < 36; r++) {
+                    var skip = [15, 18, 24, 29];
                     function aba(element, index, array) {
                         return (element === r);
                     }
                     if (skip.find(aba)) {
-                        r++;
+                      continue;
                     }
                     row = $(tbl).children()[r];
-                    var notkilo = [23, 24, 25, 26, 27, 30, 31, 32, 33];
+                    var notkilo = [25, 26, 27, 28, 30, 31, 32, 33, 34, 35];
                     var res;
                     var summa = 0;
                     for (var i = 1; i < 6; i++) {
