@@ -197,7 +197,6 @@
 
             // Суммарные показатели
             {
-                for (var r = 7; r < 34; r++) {
                 for (var r = 7; r < 36; r++) {
                     var skip = [15, 18, 24, 29];
                     function aba(element, index, array) {
